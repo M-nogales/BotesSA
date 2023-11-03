@@ -62,15 +62,20 @@ $resultado_conex1 .= "<tr class='Main-Orange'>";
 
 // nombres de las columnas
 while ($columna = mysqli_fetch_field($resultado1)) {
-  $resultado_conex1 .= "<th scope="."col".">{$columna->name}</th>";
+  $resultado_conex1 .= "<th scope=" . "col" . ">{$columna->name}</th>";
 }
-// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-while ($fila = mysqli_fetch_assoc($resultado1)) {
-  $resultado_conex1 .= "<tr>";
-  foreach ($fila as $value) {
-    $resultado_conex1 .= "<td  scope="."row".">$value</td>";
+if (mysqli_num_rows($resultado1) > 0) {
+  // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+  while ($fila = mysqli_fetch_assoc($resultado1)) {
+    $resultado_conex1 .= "<tr>";
+    foreach ($fila as $value) {
+      $resultado_conex1 .= "<td  scope=" . "row" . ">$value</td>";
+    }
+    $resultado_conex1 .= "</tr>";
   }
-  $resultado_conex1 .= "</tr>";
+} else {
+  // en caso de no encontrar resultados en la consulta dejamos una fila con lo siguiente
+  $resultado_conex1 .= "<tr><td colspan='" . mysqli_num_fields($resultado1) . "'>No se encontraron resultados</td></tr>";
 }
 $resultado_conex1 .= "</table>";
 /*echo $resultado_conex1;*/
@@ -81,15 +86,20 @@ $resultado_conex2 .= "<tr class='Main-Orange'>";
 
 // nombres de las columnas
 while ($columna = mysqli_fetch_field($resultado2)) {
-  $resultado_conex2 .= "<th scope="."col Main-Orange".">{$columna->name}</th>";
+  $resultado_conex2 .= "<th scope=" . "col Main-Orange" . ">{$columna->name}</th>";
 }
-// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-while ($fila = mysqli_fetch_assoc($resultado2)) {
-  $resultado_conex2 .= "<tr>";
-  foreach ($fila as $value) {
-    $resultado_conex2 .= "<td  scope="."row".">$value</td>";
+if (mysqli_num_rows($resultado2) > 0) {
+  // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+  while ($fila = mysqli_fetch_assoc($resultado2)) {
+    $resultado_conex2 .= "<tr>";
+    foreach ($fila as $value) {
+      $resultado_conex2 .= "<td  scope=" . "row" . ">$value</td>";
+    }
+    $resultado_conex2 .= "</tr>";
   }
-  $resultado_conex2 .= "</tr>";
+} else {
+  // en caso de no encontrar resultados en la consulta dejamos una fila con lo siguiente
+  $resultado_conex2 .= "<tr><td colspan='" . mysqli_num_fields($resultado2) . "'>No se encontraron resultados</td></tr>";
 }
 $resultado_conex2 .= "</table>";
 /*echo $resultado_conex2;*/
@@ -99,15 +109,20 @@ $resultado_conex3 .= "<tr class='Main-Orange'>";
 
 // nombres de las columnas
 while ($columna = mysqli_fetch_field($resultado3)) {
-  $resultado_conex3 .= "<th scope="."col".">{$columna->name}</th>";
+  $resultado_conex3 .= "<th scope=" . "col" . ">{$columna->name}</th>";
 }
-// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-while ($fila = mysqli_fetch_assoc($resultado3)) {
-  $resultado_conex3 .= "<tr>";
-  foreach ($fila as $value) {
-    $resultado_conex3 .= "<td  scope="."row".">$value</td>";
+if (mysqli_num_rows($resultado3) > 0) {
+  // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+  while ($fila = mysqli_fetch_assoc($resultado3)) {
+    $resultado_conex3 .= "<tr>";
+    foreach ($fila as $value) {
+      $resultado_conex3 .= "<td  scope=" . "row" . ">$value</td>";
+    }
+    $resultado_conex3 .= "</tr>";
   }
-  $resultado_conex3 .= "</tr>";
+} else {
+  // en caso de no encontrar resultados en la consulta dejamos una fila con lo siguiente
+  $resultado_conex3 .= "<tr><td colspan='" . mysqli_num_fields($resultado3) . "'>No se encontraron resultados</td></tr>";
 }
 $resultado_conex3 .= "</table>";
 /*echo $resultado_conex3;*/
@@ -117,15 +132,20 @@ $resultado_conex4 .= "<tr class='Main-Orange'>";
 
 // nombres de las columnas
 while ($columna = mysqli_fetch_field($resultado4)) {
-  $resultado_conex4 .= "<th scope="."col".">{$columna->name}</th>";
+  $resultado_conex4 .= "<th scope=" . "col" . ">{$columna->name}</th>";
 }
-// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-while ($fila = mysqli_fetch_assoc($resultado4)) {
-  $resultado_conex4 .= "<tr>";
-  foreach ($fila as $value) {
-    $resultado_conex4 .= "<td  scope="."row".">$value</td>";
+if (mysqli_num_rows($resultado4) > 0) {
+  // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+  while ($fila = mysqli_fetch_assoc($resultado4)) {
+    $resultado_conex4 .= "<tr>";
+    foreach ($fila as $value) {
+      $resultado_conex4 .= "<td  scope=" . "row" . ">$value</td>";
+    }
+    $resultado_conex4 .= "</tr>";
   }
-  $resultado_conex4 .= "</tr>";
+} else {
+  // en caso de no encontrar resultados en la consulta dejamos una fila con lo siguiente
+  $resultado_conex4 .= "<tr><td colspan='" . mysqli_num_fields($resultado4) . "'>No se encontraron resultados</td></tr>";
 }
 $resultado_conex4 .= "</table>";
 /*echo $resultado_conex4;*/
@@ -135,15 +155,20 @@ $resultado_conex5 .= "<tr class='Main-Orange'>";
 
 // nombres de las columnas
 while ($columna = mysqli_fetch_field($resultado5)) {
-  $resultado_conex5 .= "<th scope="."col".">{$columna->name}</th>";
+  $resultado_conex5 .= "<th scope=" . "col" . ">{$columna->name}</th>";
 }
-// Bucle while que recorre cada registro y muestra cada campo en la tabla.
-while ($fila = mysqli_fetch_assoc($resultado5)) {
-  $resultado_conex5 .= "<tr>";
-  foreach ($fila as $value) {
-    $resultado_conex5 .= "<td  scope="."row".">$value</td>";
+if (mysqli_num_rows($resultado5) > 0) {
+  // Bucle while que recorre cada registro y muestra cada campo en la tabla.
+  while ($fila = mysqli_fetch_assoc($resultado5)) {
+    $resultado_conex5 .= "<tr>";
+    foreach ($fila as $value) {
+      $resultado_conex5 .= "<td  scope=" . "row" . ">$value</td>";
+    }
+    $resultado_conex5 .= "</tr>";
   }
-  $resultado_conex5 .= "</tr>";
+} else {
+  // en caso de no encontrar resultados en la consulta dejamos una fila con lo siguiente
+  $resultado_conex5 .= "<tr><td colspan='" . mysqli_num_fields($resultado5) . "'>No se encontraron resultados</td></tr>";
 }
 $resultado_conex5 .= "</table>";
 /*echo $resultado_conex5;*/
