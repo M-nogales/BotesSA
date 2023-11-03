@@ -1,0 +1,161 @@
+:root {
+  --Main-Green: #00E79F;
+  --Main-Blue: #00E7DD;
+  --Main-White: #EEFFFE;
+  --Main-Black: #26473D;
+  --Main-Orange: #EB5203;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url('../fonts/Avenir_LT_Std/Avenir_LT_Std_55_Roman/Avenir_LT_Std_55_Roman.otf') format('opentype'); 
+}
+
+@font-face {
+  font-family: 'HalisGR Regular';
+  src: url('../fonts/Halis_font/Ahmet_Altun-HalisGR-Regular.otf') format('opentype');
+}
+.Logo{
+  width: 30%;
+  height: auto;
+
+}
+.fillBlue{
+  fill:var(--Main-Blue);
+  stroke: black;
+  stroke-width: 1px ;
+}
+.fillBlack{
+  fill: var(--Main-Black);
+  stroke: black;
+  stroke-width: 1px ;
+}
+.fillOtherBlack{
+  fill: #1f3a32;
+  stroke: black;
+  stroke-width: 1px ;
+}
+.Avenir{
+  font-family: 'Avenir Roman',sans-serif;
+  font-weight: 700;
+  /*, sans-serif*/
+}
+.Halis{
+  font-family: 'HalisGR Regular',sans-serif;
+  font-weight: 700;
+  /*, sans-serif*/
+}
+a,th,h1,h2,h3{
+  font-family: 'HalisGR Regular',sans-serif;
+  font-weight: 700 !important;/*Anti nav-link boostrap*/
+}
+p,td{
+  font-family: 'Avenir Roman',sans-serif;
+}
+li a{
+  font-size: 6rem;
+}
+li a.nav-link.px-2.Main-Text:hover {
+  color: var(--Main-Orange);
+} 
+
+.github:hover{
+ fill: purple;
+}
+
+.linkedin:hover{
+fill:rgb(8, 196, 209);
+
+}
+
+footer ul li a {
+  font-size: medium;
+}
+
+.Main-Green {
+  background-color: var(--Main-Green);
+}
+
+.Main-Blue {
+  background-color: var(--Main-Blue);
+}
+
+.Main-White {
+  background-color: var(--Main-White);
+}
+
+.Main-Black {
+  background-color: var(--Main-Black);
+}
+
+.Main-Orange {
+  background-color: var(--Main-Orange);
+}
+/* fuente titulos*/
+.Main-Text {
+  color: var(--Main-Black);
+}
+/*
+todo .secondary text con fuente 2
+*/
+.Main-Border{
+border-color: var(--Main-Black) ;
+border-top-width: 0vh;
+border-left-width: 0vw;
+border-right-width: 0vw;
+border-style: solid;
+border-bottom-width: 0.25vh;
+}
+.Main-table-border{
+  border-color: var(--Main-Black);
+}
+
+.Main-table-border> :not(caption)>*>*{
+  border-width: 0px 2px;
+}
+
+.Main-table-border> :not(caption)>*{
+  border-width: 2px 0px;
+}
+
+.Main-Img{
+  max-width: 20vw;
+  height: auto;
+}
+
+.big-size-icons{
+  width:15vw;
+  height:15vh;
+  fill: var(--Main-Black);
+}
+.little-size-icons{
+  width: 4vw;
+  height: 4vh;
+  fill: var(--Main-Black);
+}
+.img-fluid{
+  max-width:50%;
+}
+/* Ancho máximo del 55% hasta 1200px */
+@media (max-width: 1200px) {
+  .img-fluid {
+    max-width: 55%;
+  }
+}
+
+/* Ancho máximo del 70% en el intervalo de 992px a 1200px */
+@media (max-width: 993px) {
+  .img-fluid {
+    max-width: 70%;
+  }
+}
+
+/* Ancho máximo del 100% en el intervalo de 767px a 992px */
+@media (max-width: 767px) {
+  .img-fluid {
+    max-width: 100%;
+  }
+}
